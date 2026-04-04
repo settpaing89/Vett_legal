@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Vett</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F5F5F5;
+      --surface: #FFFFFF;
+      --charcoal: #1C1C1E;
+      --green: #2D6A4F;
+      --green-light: #DCFCE7;
+      --muted: #6B6B70;
+      --border: #E0E4E0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--charcoal);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--charcoal);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--green);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .logo-text {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 6px;
+      color: #FFFFFF;
+    }
+
+    .hero {
+      background: var(--green);
+      padding: 48px 24px 64px;
+      text-align: center;
+      border-bottom: 3px solid var(--charcoal);
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .section {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    .section p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .item-list {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .item-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .item-list li:last-child { border-bottom: none; }
+
+    .item-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .disclaimer-card {
+      background: #FEF3C7;
+      border-left: 3px solid #D97706;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+
+    .disclaimer-card p {
+      color: #92400E !important;
+      font-size: 14px !important;
+    }
+
+    .plan-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .plan-card {
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .plan-card.free {
+      background: var(--bg);
+    }
+
+    .plan-card.premium {
+      background: var(--green-light);
+      border-color: var(--green);
+    }
+
+    .plan-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    .plan-card.premium .plan-label { color: var(--green); }
+
+    .plan-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    .plan-feature {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .contact-card {
+      background: var(--green-light);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+
+    .contact-card a {
+      color: var(--green);
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--green);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 24px 20px; }
+      .plan-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 5L10 16L16 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <span class="logo-text">VETT</span>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Terms of Service</h1>
+  <p>LAST UPDATED: APRIL 4, 2026</p>
+</div>
+
+<main>
+
+  <div class="section">
+    <div class="section-number">01</div>
+    <h2>Acceptance</h2>
+    <p>By downloading or using Vett, you agree to be bound by these Terms of Service. If you do not agree, please do not use the app.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">02</div>
+    <h2>Service Description</h2>
+    <p>Vett provides food safety information based on product ingredients and your dietary conditions. Results are for informational purposes only and do not constitute medical advice.</p>
+    <div class="disclaimer-card">
+      <p>Always consult a qualified healthcare professional before making medical or dietary decisions based on information provided by this app.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">03</div>
+    <h2>Subscriptions</h2>
+    <div class="plan-grid">
+      <div class="plan-card free">
+        <div class="plan-label">Free Tier</div>
+        <div class="plan-name">Basic</div>
+        <div class="plan-feature">20 scans per week</div>
+      </div>
+      <div class="plan-card premium">
+        <div class="plan-label">Paid Tier</div>
+        <div class="plan-name">Vett Premium</div>
+        <div class="plan-feature">Unlimited scans + all features</div>
+      </div>
+    </div>
+    <ul class="item-list" style="margin-top: 16px;">
+      <li>Subscriptions auto-renew unless cancelled 24 hours before renewal</li>
+      <li>Managed and billed through Apple App Store</li>
+      <li>Cancel anytime in your Apple ID subscription settings</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">04</div>
+    <h2>User Responsibilities</h2>
+    <ul class="item-list">
+      <li>You must be 13 years of age or older to use Vett</li>
+      <li>You are responsible for the accuracy of health conditions and dietary preferences you input</li>
+      <li>You agree not to misuse or attempt to reverse engineer the app</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-number">05</div>
+    <h2>Disclaimer</h2>
+    <p>Vett is not a medical device and has not been evaluated by the FDA or any regulatory body. Food safety ratings are based on publicly available nutritional data and your stated conditions.</p>
+    <div class="disclaimer-card">
+      <p>We are not liable for any health decisions made based on results provided by this app. Never rely on Vett to manage a life-threatening allergy or medical condition.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">06</div>
+    <h2>Contact</h2>
+    <p>For questions about these terms, contact us at:</p>
+    <div class="contact-card">
+      <a href="mailto:asp881999@gmail.com">asp881999@gmail.com</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Vett. All rights reserved.</p>
+  <p style="margin-top: 8px;">
+    <a href="./privacy.html">Privacy Policy</a>
+    <a href="./terms.html">Terms of Service</a>
+  </p>
+</footer>
+
+</body>
+</html>
